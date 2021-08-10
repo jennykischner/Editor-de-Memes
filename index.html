@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> ✹ Generador de Memes</title>
+    <link rel="stylesheet" href="style.css">
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="mainPanel zIndex1">
+<header>
+<div class="header">
+<h1>Generador de Memes</h1>
+<div class="buttons">
+<button class="button" id="image"><i class="fa fa-file-image-o" aria-hidden="true"></i>  Imagen</button>
+<button class="button" id="text"><i class="fa fa-font" aria-hidden="true"></i>  Texto</button>
+<button class="button" id="switchTheme"> <i class="fa fa-lightbulb-o" aria-hidden="true"></i>  Modo oscuro</button>
+</div>
+</div>
+</header>
+
+<main>
+<div class="container">
+<p class="topText">TOP TEXT</p>
+<div id= "imgMeme"></div>
+<p class="bottomText">BOTTOM TEXT</p>
+</div>
+<button class="download"><i class="fa fa-download" aria-hidden="true"></i>  Descargar meme</button>
+</main>
+</div>
+
+<aside class="imageEdit displayNone">
+<div class="close">
+<i id="closeImg" class="fa fa-times " aria-hidden="true"></i>
+</div>
+<div class="containerEdit">
+<h1>IMAGEN</h1>
+<label for="url" class="url"> URL
+<input type="text" id="url" aria-label="Url">
+</label>
+
+<div class="color">
+<label for="backgroundColor" class="backgroundColor"> FONDO
+<div class="colorContainer">
+<input type="color" id="backgroundColor" aria-label="Color de fondo" value="#000000">
+<p class="backgroundColorNumber">#000000</p>
+</div>
+</label>
+<select id="backgroundOptions">
+<option value="unset">Ninguno</option>
+<option value="lighten">Aclarar</option>
+<option value="darken">Oscurecer</option>
+<option value="difference">Diferencia</option>
+<option value="luminosity">Luminosidad</option>
+<option value="multiply">Multiplicar</option>
+</select>
+</div>
+</div>
+
+<div class="filters">
+<h3>FILTROS</h3>
+<label for="brightness">BRILLO
+<input type="range" min="0" max="1" value="1" step="0.1" id="brightness">
+</label>
+<label for="opacity">OPACIDAD
+<input type="range" min="0" max="1" value="1" step="0.1" id="opacity">
+</label>
+<label for="contrast">CONTRASTE
+<input type="range" min="100%" max="1000%" value="1000" step="1%" id="contrast">
+</label>
+<label for="blur">DESENFOQUE
+<input type="range" min="0px" max="10px" value="0" step="0.1px" id="blur">
+</label>
+<label for="grayscale">ESCALA DE GRISES
+<input type="range" min="0%" max="100%" value="0" step="1%" id="grayscale">
+</label>
+<label for="sepia">SEPIA
+<input type="range" min="0%" max="100%" value="0" step="1%" id="sepia">
+</label>
+<label for="hue">HUE
+<input type="range" min="0deg" max="359deg" value="0" step="1deg" id="hue">
+</label>
+<label for="saturation">SATURADO
+<input type="range" min="100%" max="1000%" value="100" step="10%" id="saturation">
+</label>
+<label for="negative">NEGATIVO
+<input type="range" min="0" max="1" value="0" step="0.1" id="negative">
+</label>
+<button class="resetFilters">Reestablecer filtros</button>
+</div>
+</aside>
+
+<aside class="textEdit displayNone">
+<div class="close">
+<i id="closeText" class="fa fa-times" aria-hidden="true"></i>
+</div>
+<div class="containerEdit ">
+<h1>TEXTO</h1>
+<label for="topTextEdit" class="topTextEdit"> SUPERIOR
+<textarea  id="topTextEdit" rows="1" aria-label="Texto superior" value="TOP TEXT">TOP TEXT</textarea>
+</label>
+<div class="checkbox">
+<input type="checkbox" id="topTextCheckbox">
+<label for="topTextCheckbox">Sin texto superior</label>
+</div>
+<label for="bottomTextEdit" class="bottomTextEdit"> INFERIOR
+<textarea  id="bottomTextEdit" rows="1" aria-label="Texto inferior" value="BOTTOM TEXT">BOTTOM TEXT</textarea>
+</label>
+<div class="checkbox">
+<input type="checkbox" id="bottomTextCheckbox">
+<label for="bottomTextCheckbox">Sin texto inferior</label>
+</div>
+<label for="fontOptions" class="fontOptions"> FUENTE
+<select id="fontOptions">
+<option value="Arial">Arial</option>
+<option value="Courier">Courier</option>
+<option value="Satisfy">Satisfy</option>
+<option value="Coiny">Coiny</option>
+<option value="Roboto">Roboto</option>
+<option value="'Times New Roman'">Times New Roman</option>
+<option value="Impact">Impact</option>
+<option value="Verdana">Verdana</option>
+<option value="Freckle Face">Freckle Face</option>
+</select>
+</label>
+
+<div class="containerTextEdit">
+<input type="number" id="fontSize" aria-label="Tamaño de texto" value=15 min=10 max=60>
+<button class="align alignLeft"><i class="fa fa-align-left alignIcon" aria-hidden="true"></i></button>   
+<button class="align alignCenter"><i class="fa fa-align-center alignIcon" aria-hidden="true"></i></button>
+<button class="align alignRight"><i class="fa fa-align-right alignIcon" aria-hidden="true"></i></button>             
+</div>
+
+<div class="color">
+                
+<label for="textColor" class="textColor"> COLOR
+<div class="colorContainer">
+<input type="color" id="textColor" aria-label="Color de texto" value="#000000">
+<p class="textColorNumber">#000000</p>
+</div>
+</label>
+<label for="backgroundColorText" class="backgroundColorText"> FONDO
+<div class="colorContainer">
+<input type="color" id="backgroundColorText" aria-label="Color de fondo de texto" value="#FFFFFF">
+<p class="backgroundColorNumberText">#FFFFFF</p>
+</div>
+</label>
+</div>
+<div class="checkbox">
+<input type="checkbox" id="transparentTextCheckbox">
+<label for="transparentTextCheckbox">Fondo transparente</label>
+</div>
+<div class="outline">
+<h4>CONTORNO</h4>
+<div class="buttonsOutline">
+<button class="outlineButton notOutline">Ninguno</button>
+<button class="outlineButton lightOutline">Claro</button>
+<button class="outlineButton darkOutline">Oscuro</button>
+<div class="space"></div>
+</div>
+</div>
+
+<label for="spacing" class="spacing"> ESPACIADO
+<input type="number" id="spacing" aria-label="Texto espaciado" min=0 max=60 value=10>
+</label>
+<label for="lineSpacing" class="lineSpacing"> INTERLINEADO
+<select id="lineSpacing" aria-label="Texto interlineado" value="1.2">
+<option value="0.8">0.8</option>
+<option value="1">1</option>
+<option value="1.2" selected>1.2</option>
+<option value="1.5">1.5</option>
+<option value="2">2</option>
+<option value="2.5">2.5</option>
+</select>
+</label>
+</div>
+</aside >
+
+<script src="app.js"></script>
+</body>
+</html>
