@@ -66,3 +66,38 @@ header{
     margin-bottom: 1.2rem;
     width: fit-content;
 }
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
+}
+.button{
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: var(--background-color-header);
+    color: var(--color);
+    cursor: pointer;
+}
+.button:hover{
+    font-weight: 600;
+    opacity: 0.8;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+.container{
+    width: 40vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
