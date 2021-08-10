@@ -101,3 +101,38 @@ main{
     position: relative;
 }
 
+#imgMeme{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: unset;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+}
+.topText{
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: white;
+    position: static;
+    top: 0;
+    z-index: 2;
+}
+.bottomText{
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: white;
+    position: static;
+    bottom: 0;
+    z-index: 2;
+}
+
