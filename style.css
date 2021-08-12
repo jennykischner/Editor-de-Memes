@@ -136,3 +136,28 @@ main{
     z-index: 2;
 }
 
+.download{
+    background-color: rgb(66, 129, 66);
+    border: none;
+    border-radius: 3px;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    outline: none;
+    color: white;
+    margin-top: 1rem;
+}
+.download:hover{
+    background-color: rgb(40, 109, 40);
+}
+.download:active{
+    border: 2px solid rgb(66, 129, 66);
+}
+.imageEdit{
+    width: 100%;
+    background-color: var(--background-color-panel);
+    color: var(--color);
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+
