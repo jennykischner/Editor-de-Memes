@@ -139,4 +139,17 @@ function switchTheme(e) {
     switchThemeButton.addEventListener('click', switchTheme);
     
 
-    
+// Edicion imagen
+
+// Agrego imagen
+inputUrl.addEventListener("input",()=>{
+    const url = inputUrl.value;
+    divImg.style.backgroundImage = `url(${url})`;
+});
+
+// Cambio color de fondo
+backgroundColor.addEventListener("input",()=>{
+    const color = backgroundColor.value;
+    divImg.style.backgroundColor = color;
+    backgroundColorNumber.textContent = color;
+});
