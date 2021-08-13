@@ -122,3 +122,21 @@ const cerrarPanel = () => {
 closeImg.addEventListener("click", cerrarPanel);
 closeText.addEventListener("click", cerrarPanel);
 
+
+// Modo oscuro
+
+function switchTheme(e) {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "light";
+    switchThemeButton.innerHTML = `<i class="fa fa-lightbulb-o" aria-hidden="true"></i> Modo oscuro`;
+
+    if(currentTheme ==  "light" ||  currentTheme == undefined){
+        targetTheme = "dark"
+        switchThemeButton.innerHTML = `<i class="fa fa-lightbulb-o" aria-hidden="true"></i> Modo claro`;
+    }
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    }
+    switchThemeButton.addEventListener('click', switchTheme);
+    
+
+    
