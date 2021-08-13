@@ -9,3 +9,12 @@ const switchThemeButton = document.querySelector("#switchTheme");
 const closeImg = document.querySelector("#closeImg");
 const closeText = document.querySelector("#closeText");
 const imageEdit = document.querySelector(".imageEdit");
+
+// Edición texto 
+
+const textEdit = document.querySelector(".textEdit");
+const topTextEdit = document.querySelector("#topTextEdit");
+const bottomTextEdit = document.querySelector("#bottomTextEdit");
+
+const container = document.querySelector(".container");
+
