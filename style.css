@@ -322,3 +322,32 @@ main{
     color: var(--color);
 }
 
+#fontSize{
+    width: 45%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+.align{
+    width: 14%;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+.align:hover{
+    background-color: var(--button-hover);
+}
+.alignIcon{
+    font-size: 0.9rem;
+}
+.outline h4{
+    margin-bottom: 0.8rem;
+}
+

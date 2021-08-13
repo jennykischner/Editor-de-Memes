@@ -86,3 +86,39 @@ const darkOutline = document.querySelector(".darkOutline");
 
 const spacing = document.querySelector("#spacing");
 const lineSpacing = document.querySelector("#lineSpacing");
+
+// Descarga imagen 
+
+const download = document.querySelector(".download");
+
+
+// Abrir y cerrar paneles
+
+const abrirPanelImagen = () => {
+    imageEdit.classList.add("zIndex4");
+    imageEdit.classList.toggle("displayNone");
+    main.classList.remove("zIndex4");
+    textEdit.classList.toggle("displayNone");
+    textEdit.classList.remove("zIndex4");
+}
+image.addEventListener("click", abrirPanelImagen);
+
+const abrirPanelTexto = () => {
+    textEdit.classList.add("zIndex4");
+    textEdit.classList.toggle("displayNone");
+    main.classList.remove("zIndex4");
+    imageEdit.classList.toggle("displayNone");
+    imageEdit.classList.remove("zIndex4");
+}
+text.addEventListener("click", abrirPanelTexto);
+
+const cerrarPanel = () => {
+    main.classList.add("zIndex4");
+    textEdit.classList.remove("zIndex4");
+    imageEdit.classList.remove("zIndex4");
+    textEdit.classList.toggle("displayNone");
+    imageEdit.classList.toggle("displayNone");
+}
+closeImg.addEventListener("click", cerrarPanel);
+closeText.addEventListener("click", cerrarPanel);
+
