@@ -297,3 +297,28 @@ main{
     right: 0;
 }
 
+.containerTextEdit{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+    margin-bottom: 1.4rem;
+}
+.topTextEdit, .bottomTextEdit, .fontOptions, .lineSpacing, .spacing, .outline{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#topTextEdit, #bottomTextEdit, #fontOptions, #lineSpacing, #spacing{
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+    margin-top: 0.8rem;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+

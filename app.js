@@ -67,3 +67,22 @@ const alignLeft = document.querySelector(".alignLeft");
 const alignCenter = document.querySelector(".alignCenter");
 const alignRight = document.querySelector(".alignRight");
 
+// Cambio color texto 
+
+const textColor = document.querySelector("#textColor");
+const textColorNumber = document.querySelector(".textColorNumber");
+
+
+// Fondo Transparente 
+
+const transparentTextCheckbox = document.querySelector("#transparentTextCheckbox");
+const notOutline = document.querySelector(".notOutline");
+
+// Contorno Texto 
+const lightOutline = document.querySelector(".lightOutline");
+const darkOutline = document.querySelector(".darkOutline");
+
+// Espaciado
+
+const spacing = document.querySelector("#spacing");
+const lineSpacing = document.querySelector("#lineSpacing");
