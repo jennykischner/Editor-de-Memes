@@ -30,3 +30,19 @@ const backgroundColorNumber = document.querySelector(".backgroundColorNumber");
 const backgroundColorText = document.querySelector("#backgroundColorText");
 const backgroundColorNumberText = document.querySelector(".backgroundColorNumberText");
 
+// Blend Mode
+
+const backgroundOptions = document.querySelector("#backgroundOptions");
+
+// Filtros
+
+const brightness = document.querySelector("#brightness");
+const opacity = document.querySelector("#opacity");
+const contrast = document.querySelector("#contrast");
+const blur_ = document.querySelector("#blur");
+const grayscale = document.querySelector("#grayscale");
+const sepia = document.querySelector("#sepia");
+const hue = document.querySelector("#hue");
+const saturation = document.querySelector("#saturation");
+const negative = document.querySelector("#negative");
+const resetFilters = document.querySelector(".resetFilters");
