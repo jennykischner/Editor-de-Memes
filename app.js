@@ -46,3 +46,24 @@ const hue = document.querySelector("#hue");
 const saturation = document.querySelector("#saturation");
 const negative = document.querySelector("#negative");
 const resetFilters = document.querySelector(".resetFilters");
+
+
+// Texto 
+
+const topText = document.querySelector(".topText");
+const bottomText = document.querySelector(".bottomText");
+const topTextCheckbox = document.querySelector("#topTextCheckbox");
+const bottomTextCheckbox = document.querySelector("#bottomTextCheckbox");
+
+// Fuentes
+
+const fontOptions = document.querySelector("#fontOptions");
+const fontSize = document.querySelector("#fontSize");
+
+
+// Alineado 
+
+const alignLeft = document.querySelector(".alignLeft");
+const alignCenter = document.querySelector(".alignCenter");
+const alignRight = document.querySelector(".alignRight");
+

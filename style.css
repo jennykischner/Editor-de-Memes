@@ -274,4 +274,26 @@ main{
     background: var(--input-color-range-circle);
 }
 
+.resetFilters{
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    width: 9rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+.resetFilters:hover{
+    background-color: var(--button-hover);
+}
+.textEdit{
+    width: 100%;
+    background-color: var(--background-color-panel);
+    color: var(--color);
+    position: absolute;
+    right: 0;
+}
 
