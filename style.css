@@ -351,3 +351,22 @@ main{
     margin-bottom: 0.8rem;
 }
 
+.buttonsOutline{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+.outlineButton{
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+    padding: 0.5rem;
+}
+.outlineButton:hover{
+    background-color: var(--button-hover);
+}
