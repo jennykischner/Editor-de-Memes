@@ -18,3 +18,15 @@ const bottomTextEdit = document.querySelector("#bottomTextEdit");
 
 const container = document.querySelector(".container");
 
+// Imagenes 
+
+const divImg = document.querySelector("#imgMeme");
+const inputUrl = document.querySelector("#url");
+
+// Colores
+
+const backgroundColor = document.querySelector("#backgroundColor");
+const backgroundColorNumber = document.querySelector(".backgroundColorNumber");
+const backgroundColorText = document.querySelector("#backgroundColorText");
+const backgroundColorNumberText = document.querySelector(".backgroundColorNumberText");
+

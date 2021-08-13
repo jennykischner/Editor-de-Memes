@@ -221,3 +221,26 @@ main{
     background-color: var(--input-color);
 }
 
+#backgroundColor, #textColor, #backgroundColorText{
+    border: none;
+    outline: none;
+    background-color: var(--input-color);
+ }
+ .backgroundColorNumber, .textColorNumber, .backgroundColorNumberText{
+     width: 80%;
+     font-size: 1rem;
+     font-weight: 400;
+     background-color: var(--input-color);
+ }
+ #backgroundOptions{
+     border: none;
+     border-radius: 3px;
+     width: 47%;
+     height: 2.15rem;
+     margin-top: 1.3rem;
+     padding-left: 0.8rem;
+     background-color: var(--input-color);
+     color: var(--color);
+ }
+
+ 
