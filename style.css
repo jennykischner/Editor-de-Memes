@@ -387,3 +387,39 @@ main{
     font-size: 0.8rem;
     padding-left: 0.4rem;
 }
+
+@media (min-width: 525px){
+    .imageEdit{
+        width: 16rem;
+        height:100%;
+        overflow:scroll;
+        overflow-x:hidden;
+    }
+    .textEdit{
+        width: 16rem;
+        height:100%;
+        overflow:scroll;
+        overflow-x:hidden;
+    }   
+    .container{
+        width: 50vh;
+        height: 50vh;
+    }
+}
+@media (min-width: 700px){
+    .container{
+        width: 60vh;
+        height: 60vh;
+    }
+}
+@media (min-width: 965px){
+    .close{
+        display: none;
+    }
+    .imageEdit{
+        display: block;
+    }
+    .textEdit{
+        display: block;
+    }
+}
