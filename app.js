@@ -153,3 +153,27 @@ backgroundColor.addEventListener("input",()=>{
     divImg.style.backgroundColor = color;
     backgroundColorNumber.textContent = color;
 });
+
+// Blend Mode
+backgroundOptions.addEventListener("change", () => {
+    divImg.style.backgroundBlendMode = backgroundOptions.value;
+});
+
+// Filtros
+const actualizarFiltros = ()=>{
+    divImg.style.filter = `brightness(${brightness.value}) 
+    opacity(${opacity.value}) contrast(${contrast.value}%) 
+    blur(${blur_.value}px) grayscale(${grayscale.value}%) 
+    sepia(${sepia.value}%) hue-rotate(${hue.value}deg) 
+    saturate(${saturation.value}%) invert(${negative.value})`;
+}
+brightness.addEventListener("change", actualizarFiltros);
+opacity.addEventListener("change", actualizarFiltros);
+contrast.addEventListener("change", actualizarFiltros);
+blur_.addEventListener("change", actualizarFiltros);
+grayscale.addEventListener("change", actualizarFiltros);
+sepia.addEventListener("change", actualizarFiltros);
+hue.addEventListener("change", actualizarFiltros);
+saturation.addEventListener("change", actualizarFiltros);
+negative.addEventListener("change", actualizarFiltros);
+
