@@ -370,3 +370,20 @@ main{
 .outlineButton:hover{
     background-color: var(--button-hover);
 }
+
+.space{
+    width: 42%;
+}
+.lineSpacing, .spacing{
+    margin-top: 0.8rem;
+}
+.checkbox{
+    display: flex;
+    width: 92%;
+    margin-bottom: 1.3rem;
+    margin-top: 0.6rem;
+}
+.checkbox label{
+    font-size: 0.8rem;
+    padding-left: 0.4rem;
+}
