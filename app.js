@@ -177,3 +177,23 @@ hue.addEventListener("change", actualizarFiltros);
 saturation.addEventListener("change", actualizarFiltros);
 negative.addEventListener("change", actualizarFiltros);
 
+
+// Reestablecer filtros
+
+const inicializarFiltros = ()=>{
+    brightness.value = "1";
+    opacity.value = "1";
+    contrast.value = "1000";
+    blur_.value = "0";
+    grayscale.value = "0";
+    sepia.value = "0";
+    hue.value = "0";
+    saturation.value = "100";
+    negative.value = "0";
+}
+
+resetFilters.addEventListener("click", () => {
+    inicializarFiltros();
+    actualizarFiltros();
+});
+
