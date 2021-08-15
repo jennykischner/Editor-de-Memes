@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --background-color-header: rgb(131,193,247);
+    --color: rgb(56, 47, 55);
+    --background-color-main: rgb(228, 226, 228);
+    --background-color-panel: rgb(255, 255, 255);
+    --input-color: rgb(131,193,247);
+    --input-color-range: rgb(71, 59, 70); 
+    --input-color-range-circle: rgb(71, 59, 70);
+    --button-hover: rgb(201, 177, 201);
+}
+body{
+    display: flex; 
+    position: relative;
+    background-color: var(--background-color-main);
+    height: 100vh;
+}
+.zIndex4{
+    z-index:3;
+    position: absolute;
+}
+.displayNone{
+    display: none;
+}
+
+.mainPanel{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color-main);
+    /* position: relative; */
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.9rem;
+    padding-bottom: 1rem;
+    background-color: var(--background-color-header);
+    color: var(--color);
+}
+[data-theme="dark"] {
+    --background-color-header: rgb(29, 24, 28);
+    --color: white;
+    --background-color-main: rgb(56, 47, 55);
+    --background-color-panel: rgb(37, 32, 37);
+    --input-color: rgb(87, 73, 85);;
+    --input-color-range: rgb(65, 54, 63); 
+    --input-color-range-circle: white;
+    --button-hover: rgb(177, 168, 175);
+}
+.header h1{
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    width: fit-content;
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
+}
+.button{
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: var(--background-color-header);
+    color: var(--color);
+    cursor: pointer;
+}
+.button:hover{
+    font-weight: 600;
+    opacity: 0.8;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+.container{
+    width: 40vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#imgMeme{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: unset;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+}
+.topText{
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: white;
+    position: static;
+    top: 0;
+    z-index: 2;
+}
+.bottomText{
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: white;
+    position: static;
+    bottom: 0;
+    z-index: 2;
+}
+
+.download{
+    background-color: rgb(66, 129, 66);
+    border: none;
+    border-radius: 3px;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    outline: none;
+    color: white;
+    margin-top: 1rem;
+}
+.download:hover{
+    background-color: rgb(40, 109, 40);
+}
+.download:active{
+    border: 2px solid rgb(66, 129, 66);
+}
+.imageEdit{
+    width: 100%;
+    background-color: var(--background-color-panel);
+    color: var(--color);
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+
+.close{
+    font-size: 1rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: var(--color);
+}
+.containerEdit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+}
+.containerEdit h1{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.url{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#url{
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    margin-top: 0.4rem;
+    margin-bottom: 1.4rem;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+
+.color{
+    display: flex;
+    width: 92%;
+    justify-content: center;
+    justify-content: space-between;
+}
+.backgroundColor, .textColor, .backgroundColorText{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 48%;
+}
+.colorContainer{
+    display: flex;
+    width: 100%;
+    height: 2.1rem;
+    margin-top: 0.4rem;
+    border-radius: 3px;
+    align-items: center;
+    background-color: var(--input-color);
+}
+
+#backgroundColor, #textColor, #backgroundColorText{
+    border: none;
+    outline: none;
+    background-color: var(--input-color);
+ }
+ .backgroundColorNumber, .textColorNumber, .backgroundColorNumberText{
+     width: 80%;
+     font-size: 1rem;
+     font-weight: 400;
+     background-color: var(--input-color);
+ }
+ #backgroundOptions{
+     border: none;
+     border-radius: 3px;
+     width: 47%;
+     height: 2.15rem;
+     margin-top: 1.3rem;
+     padding-left: 0.8rem;
+     background-color: var(--input-color);
+     color: var(--color);
+ }
+
+ .filters{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin-left: 4%;
+    font-size: 0.8rem;
+}
+.filters h3{
+    font-size: 0.8rem;
+}
+.filters label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.1rem;
+}
+.filters input{
+    -webkit-appearance: none; 
+    outline: none;
+    height: 0.4rem;
+    margin-top: 0.6rem;
+    border-radius: 3px;
+    background-color: var(--input-color-range);
+}
+.filters input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10px;
+    background: var(--input-color-range-circle);
+}
+
+.resetFilters{
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    width: 9rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+.resetFilters:hover{
+    background-color: var(--button-hover);
+}
+.textEdit{
+    width: 100%;
+    background-color: var(--background-color-panel);
+    color: var(--color);
+    position: absolute;
+    right: 0;
+}
+
+.containerTextEdit{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+    margin-bottom: 1.4rem;
+}
+.topTextEdit, .bottomTextEdit, .fontOptions, .lineSpacing, .spacing, .outline{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#topTextEdit, #bottomTextEdit, #fontOptions, #lineSpacing, #spacing{
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+    margin-top: 0.8rem;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+
+#fontSize{
+    width: 45%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+.align{
+    width: 14%;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+}
+.align:hover{
+    background-color: var(--button-hover);
+}
+.alignIcon{
+    font-size: 0.9rem;
+}
+.outline h4{
+    margin-bottom: 0.8rem;
+}
+
+.buttonsOutline{
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+.outlineButton{
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+    background-color: var(--input-color);
+    color: var(--color);
+    padding: 0.5rem;
+}
+.outlineButton:hover{
+    background-color: var(--button-hover);
+}
+
+.space{
+    width: 42%;
+}
+.lineSpacing, .spacing{
+    margin-top: 0.8rem;
+}
+.checkbox{
+    display: flex;
+    width: 92%;
+    margin-bottom: 1.3rem;
+    margin-top: 0.6rem;
+}
+.checkbox label{
+    font-size: 0.8rem;
+    padding-left: 0.4rem;
+}
+
+@media (min-width: 525px){
+    .imageEdit{
+        width: 16rem;
+        height:100%;
+        overflow:scroll;
+        overflow-x:hidden;
+    }
+    .textEdit{
+        width: 16rem;
+        height:100%;
+        overflow:scroll;
+        overflow-x:hidden;
+    }   
+    .container{
+        width: 50vh;
+        height: 50vh;
+    }
+}
+@media (min-width: 700px){
+    .container{
+        width: 60vh;
+        height: 60vh;
+    }
+}
+@media (min-width: 965px){
+    .close{
+        display: none;
+    }
+    .imageEdit{
+        display: block;
+    }
+    .textEdit{
+        display: block;
+    }
+}
