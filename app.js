@@ -197,3 +197,15 @@ resetFilters.addEventListener("click", () => {
     actualizarFiltros();
 });
 
+
+// Edicion texto
+
+// Agregar texto
+topTextEdit.addEventListener("input", () =>{
+    topText.innerText = topTextEdit.value;
+});
+
+bottomTextEdit.addEventListener("input", () =>{
+    bottomText.innerText = bottomTextEdit.value;
+});
+
