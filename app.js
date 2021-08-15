@@ -231,3 +231,29 @@ bottomTextCheckbox.addEventListener("change", () =>{
     }
 });
 
+// Fuente
+fontOptions.addEventListener("change", () =>{
+    topText.style.fontFamily = fontOptions.value;
+    bottomText.style.fontFamily = fontOptions.value;
+});
+
+// Cambio Font Size en textos
+const actualizarFontSize = ()=>{
+    topText.style.fontSize = `${fontSize.value}px`;
+    bottomText.style.fontSize = `${fontSize.value}px`;
+}
+
+// Cambia Font Size value dependiendo el tamaño
+    if(container.offsetWidth < 350){
+        fontSize.value = 15;
+        actualizarFontSize();
+    } else{
+        fontSize.value = 25;
+        actualizarFontSize();
+    }
+    
+// Font Size input
+fontSize.addEventListener("change", () =>{
+    actualizarFontSize();
+});
+
