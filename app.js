@@ -257,35 +257,23 @@ fontSize.addEventListener("change", () =>{
     actualizarFontSize();
 });
 
+
 // Align text
 alignLeft.addEventListener("click",() =>{
     topText.style.textAlign = `left`;
     bottomText.style.textAlign = `left`;
 });
+
 alignCenter.addEventListener("click",() =>{
     topText.style.textAlign = `center`;
     bottomText.style.textAlign = `center`;
 });
+
 alignRight.addEventListener("click",() =>{
     topText.style.textAlign = `right`;
     bottomText.style.textAlign = `right`;
 });
 
-// Cambio color de fondo de texto
-backgroundColorText.addEventListener("input",()=>{
-    const color = backgroundColorText.value;
-    topText.style.backgroundColor = color;
-    bottomText.style.backgroundColor = color;
-    backgroundColorNumberText.textContent = color;
-});
-
-// Cambio color de texto
-textColor.addEventListener("input",()=>{
-    const color = textColor.value;
-    topText.style.color = color;
-    bottomText.style.color = color;
-    textColorNumber.textContent = color;
-});
 
 
 
