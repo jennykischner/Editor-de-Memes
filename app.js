@@ -271,4 +271,20 @@ alignRight.addEventListener("click",() =>{
     bottomText.style.textAlign = `right`;
 });
 
+// Cambio color de fondo de texto
+backgroundColorText.addEventListener("input",()=>{
+    const color = backgroundColorText.value;
+    topText.style.backgroundColor = color;
+    bottomText.style.backgroundColor = color;
+    backgroundColorNumberText.textContent = color;
+});
+
+// Cambio color de texto
+textColor.addEventListener("input",()=>{
+    const color = textColor.value;
+    topText.style.color = color;
+    bottomText.style.color = color;
+    textColorNumber.textContent = color;
+});
+
 
