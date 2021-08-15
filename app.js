@@ -209,3 +209,25 @@ bottomTextEdit.addEventListener("input", () =>{
     bottomText.innerText = bottomTextEdit.value;
 });
 
+
+//  Checkbox con o sin texto
+topTextCheckbox.addEventListener("change", () =>{
+    if(topTextCheckbox.checked){
+        topTextEdit.disabled = true;
+        topText.classList.add("displayNone");
+    } else{
+        topTextEdit.disabled = false;
+        topText.classList.remove("displayNone");
+    }
+});
+
+bottomTextCheckbox.addEventListener("change", () =>{
+    if(bottomTextCheckbox.checked){
+        bottomTextEdit.disabled = true;
+        bottomText.classList.add("displayNone");
+    } else{
+        bottomTextEdit.disabled = false;
+        bottomText.classList.remove("displayNone");
+    }
+});
+
