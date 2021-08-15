@@ -257,7 +257,6 @@ fontSize.addEventListener("change", () =>{
     actualizarFontSize();
 });
 
-
 // Align text
 alignLeft.addEventListener("click",() =>{
     topText.style.textAlign = `left`;
@@ -287,4 +286,6 @@ textColor.addEventListener("input",()=>{
     bottomText.style.color = color;
     textColorNumber.textContent = color;
 });
+
+
 
