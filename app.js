@@ -335,6 +335,15 @@ lineSpacing.addEventListener("change", () =>{
     bottomText.style.lineHeight = lineSpace;
 });
 
+//Descarga de imagen
+download.addEventListener("click",()=>{
+    domtoimage.toBlob(container)
+      .then(function (blob) {
+      window.saveAs(blob, 'meme.png');
+    });
+  });
+
+  
 
 
 
