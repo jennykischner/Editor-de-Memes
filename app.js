@@ -306,5 +306,21 @@ transparentTextCheckbox.addEventListener("change", () =>{
     }
 });
 
+// Contorno texto
+lightOutline.addEventListener("click", () =>{
+    topText.style.textShadow = `-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white`;
+    bottomText.style.textShadow = `-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white`;
+});
+
+darkOutline.addEventListener("click", () =>{
+    topText.style.textShadow = `-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black`;
+    bottomText.style.textShadow = `-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black`;
+});
+
+notOutline.addEventListener("click", () =>{
+    topText.style.textShadow = ``;
+    bottomText.style.textShadow = ``;
+});
+
 
 
