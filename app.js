@@ -289,5 +289,22 @@ textColor.addEventListener("input",()=>{
     textColorNumber.textContent = color;
 });
 
+// Fondo transparente
+transparentTextCheckbox.addEventListener("change", () =>{
+    if(transparentTextCheckbox.checked){
+        topText.style.backgroundColor = `transparent`;
+        bottomText.style.backgroundColor = `transparent`;
+        topText.style.position = `absolute`;
+        bottomText.style.position = `absolute`;
+        backgroundColorText.disabled = true;
+    } else{
+        topText.style.backgroundColor = `${backgroundColorText.value}`;
+        bottomText.style.backgroundColor = `${backgroundColorText.value}`;
+        topText.style.position = `static`;
+        bottomText.style.position = `static`;
+        backgroundColorText.disabled = false;
+    }
+});
+
 
 
