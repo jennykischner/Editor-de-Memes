@@ -322,5 +322,20 @@ notOutline.addEventListener("click", () =>{
     bottomText.style.textShadow = ``;
 });
 
+// Espaciado
+spacing.addEventListener("input",()=>{
+    const paddingText = spacing.value;
+    topText.style.padding = `${paddingText}px 30px`;
+    bottomText.style.padding = `${paddingText}px 30px`;
+});
+
+lineSpacing.addEventListener("change", () =>{
+    const lineSpace = lineSpacing.value;
+    topText.style.lineHeight = lineSpace;
+    bottomText.style.lineHeight = lineSpace;
+});
+
+
+
 
 
