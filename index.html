@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- La pagina esta en español, pero el lenguaje del documento es ingles. Un lector de pantalla trataria de 
+leerla en ingles (va a leer "yiniradour di mims") y buscadores como google van a recomendar esta web a 
+angloparlantes.
+El lang del documento debe coincidir con el lenguaje que usan los usuarios de esta pagina.  -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +17,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- que paso con el tabulado????
+    es *absolutamente* necesario que dejes tabulado en HTML. Visual Studio lo hace por vos automaticamente!
+    Con solo apretar enter. A veces no funciona bien, en ese caso click derecho + "format document"
+    El tabulado no es opcional, es indispensable para entender quien es el padre de cada cosa
+    Las jerarquias son importantes en HTML y sin ellas es muy dificil trabajar en codigos mas complejos
+    Esto no es opcional de ninguna manera. No quiero ser dramática, pero en el ambito laboral si una
+    persona viene a una entrevista con su HTML sin tabular no lo tomo aunque tenga todo lo demas. 
+    Asi de importante es.  -->
 <div class="mainPanel zIndex1">
+    <!-- Los nombres de clase y ids en html se separan con-guiones. Reservamos la sintaxis camelCase para Javascript.  -->
 <header>
 <div class="header">
 <h1>Generador de Memes</h1>
@@ -39,6 +54,8 @@
 <i id="closeImg" class="fa fa-times " aria-hidden="true"></i>
 </div>
 <div class="containerEdit">
+    <!-- Solo debe haber un h1 por pagina: el que corresponde al titulo principal. 
+    Los textos que encabezan secciones o asides deben tener una jerarquia mas baja, como h2.  -->
 <h1>IMAGEN</h1>
 <label for="url" class="url"> URL
 <input type="text" id="url" aria-label="Url">
@@ -51,6 +68,7 @@
 <p class="backgroundColorNumber">#000000</p>
 </div>
 </label>
+<!-- Este select necesita un aria-label -->
 <select id="backgroundOptions">
 <option value="unset">Ninguno</option>
 <option value="lighten">Aclarar</option>
