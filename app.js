@@ -1,3 +1,4 @@
+// ?? por que agregaste esto?
 'use strict';
 
 // Abrir y cerrar paneles
@@ -95,6 +96,7 @@ const download = document.querySelector(".download");
 // Abrir y cerrar paneles
 
 const abrirPanelImagen = () => {
+    // los nombres de clase siempre con-guiones
     imageEdit.classList.add("zIndex4");
     imageEdit.classList.toggle("displayNone");
     main.classList.remove("zIndex4");
@@ -102,6 +104,19 @@ const abrirPanelImagen = () => {
     textEdit.classList.remove("zIndex4");
 }
 image.addEventListener("click", abrirPanelImagen);
+
+// Son tan parecidas las funciones abrirPanelImagen y abrirPanelTexto que podriamos 
+// abstraerlas en una sola funcion que reciba parametros. Asi:
+
+// const abrirPanel = (panelAbrir, panelCerrar) => {
+//     panelAbrir.classList.add("zIndex4");
+//     panelAbrir.classList.toggle("displayNone");
+//     main.classList.remove("zIndex4");
+//     panelCerrar.classList.toggle("displayNone");
+//     panelCerrar.classList.remove("zIndex4");
+// }
+// image.addEventListener("click", () => abrirPanel(imageEdit, textEdit));
+// text.addEventListener("click", () => abrirPanel(textEdit, imageEdit));
 
 const abrirPanelTexto = () => {
     textEdit.classList.add("zIndex4");
@@ -125,6 +140,15 @@ closeText.addEventListener("click", cerrarPanel);
 
 // Modo oscuro
 
+// esta muy rara esta función. no sé si es un resabio de la 7ma o un codigo sacado de internet
+// En todo caso, queda en vos si la entendés del todo o no, pero no es buena idea usar funciones
+// que no entendés del todo. 
+// Hacete estas preguntas:
+// 1. por que usas la sintaxis de funciones vieja?
+// 2. porque usas el param e?
+// 3. Por qué usas data-theme en lugar de agregar una clase o un id?
+// 4. Que es targetTheme? 
+// Si no las podes responder, es momento de replantear esta funcion
 function switchTheme(e) {
     const currentTheme = document.documentElement.getAttribute("data-theme");
     let targetTheme = "light";
@@ -142,6 +166,9 @@ function switchTheme(e) {
 // Edicion imagen
 
 // Agrego imagen
+// ojo con la sintaxis, dejá espacio entre tus conectores. 
+// Si no es dificil leer, es como si yo teescribieratodoasi. 
+// inputUrl.addEventListener("input", () => {
 inputUrl.addEventListener("input",()=>{
     const url = inputUrl.value;
     divImg.style.backgroundImage = `url(${url})`;
@@ -212,6 +239,13 @@ bottomTextEdit.addEventListener("input", () =>{
 
 //  Checkbox con o sin texto
 topTextCheckbox.addEventListener("change", () =>{
+    // espacios!
+    // if () {
+
+    // }
+    // else {
+
+    // }
     if(topTextCheckbox.checked){
         topTextEdit.disabled = true;
         topText.classList.add("displayNone");
@@ -259,6 +293,7 @@ fontSize.addEventListener("change", () =>{
 
 // Align text
 alignLeft.addEventListener("click",() =>{
+    // no uses backticks a menos que estes interpolando variables. 
     topText.style.textAlign = `left`;
     bottomText.style.textAlign = `left`;
 });
@@ -291,6 +326,7 @@ textColor.addEventListener("input",()=>{
 
 // Fondo transparente
 transparentTextCheckbox.addEventListener("change", () =>{
+    // No uses backticks a menos que estes interpolando variables. Privilegia comillas simples o dobles
     if(transparentTextCheckbox.checked){
         topText.style.backgroundColor = `transparent`;
         bottomText.style.backgroundColor = `transparent`;
